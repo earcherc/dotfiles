@@ -20,3 +20,4 @@ alias config='/usr/bin/git --git-dir=/Users/ethancavill/.cfg/ --work-tree=/Users
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export EDITOR="code -w"
+set PATH /Users/ethancavill/.nvm/versions/node/v19.0.1/bin $PATH
