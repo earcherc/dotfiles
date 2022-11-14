@@ -16,8 +16,6 @@ direnv hook fish | source
 starship init fish | source
 
 alias config='/usr/bin/git --git-dir=/Users/ethancavill/.cfg/ --work-tree=/Users/ethancavill'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 export EDITOR="code -w"
 set PATH /Users/ethancavill/.nvm/versions/node/v19.0.1/bin $PATH
