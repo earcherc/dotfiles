@@ -1,18 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/Cellar/llvm/10.0.1/bin/clangd:$PATH"
-export PATH="usr/local/opt/llvm/bin/clangd:$PATH"
-export PATH="/Users/ethancavill/go/bin:$PATH"
-export PATH="$PATH:/usr/local/sbin"
-export PATH="$PATH:/opt/homebrew/bin"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="/opt/homebrew/sbin:$PATH"
 
-# Setting PATH for Python 3.7
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-export PATH
+export PATH="$(/usr/bin/ruby -e 'puts Gem.bindir'):$PATH"
+export PATH="$PATH:/usr/local/sbin"
 export PATH=/usr/local/bin/vim:$PATH
+export PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/ethancavill/.oh-my-zsh"
@@ -21,17 +13,6 @@ export ZSH="/Users/ethancavill/.oh-my-zsh"
 export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --no-ignore-vcs"
 # Set FZF DEFAULT OPTIONS
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -86,14 +67,13 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  git
   docker
   kubectl
 )
 
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -104,7 +84,7 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -163,6 +143,4 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-eval "$(starship init zsh)"
 
-PATH=$(ruby -e 'puts Gem.bindir'):$PATH
