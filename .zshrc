@@ -68,6 +68,8 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  z
+  zsh-nvm
   docker
   kubectl
 )
@@ -76,6 +78,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+
+
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -143,4 +148,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+eval "$(direnv hook zsh)"
 
+# Load Angular CLI autocompletion.
+source <(ng completion script)

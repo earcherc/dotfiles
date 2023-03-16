@@ -1,0 +1,30 @@
+# /Users/ethancavill/.config/tmuxinator/radreport2.yml
+
+name: radreport
+root: ~/Documents/radreport
+
+windows:
+  - radreport-dev-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - cd radreport-frontend/
+            - clear
+            - nvm use 16
+            - npm start
+        - pane2:
+            - cd radreport-backend/
+            - clear
+            - flask run
+        - pane3:
+            - clear
+            - git status
+  - secondary-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - clear
+            - redis-server;
+        - pane2:
+            - clear
+            - elasticsearch
