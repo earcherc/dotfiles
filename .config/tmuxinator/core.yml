@@ -15,6 +15,7 @@ windows:
             - clear
             - uvicorn main:app --reload
         - pane3:
+            - code core.code-workspace
             - clear
             - git status
   - secondary-window:
