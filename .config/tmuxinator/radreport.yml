@@ -17,6 +17,7 @@ windows:
             - clear
             - flask run
         - pane3:
+            - code .vscode/radreport.code-workspace
             - clear
             - git status
   - secondary-window:

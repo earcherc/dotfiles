@@ -1,0 +1,28 @@
+name: radbooking
+root: ~/Documents/radbooking
+
+windows:
+  - radbooking-dev-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - cd booking-frontend/
+            - clear
+            - nvm use 18
+            - npm run dev
+        - pane2:
+            - cd booking-backend/
+            - clear
+            - uvicorn main.main:app --reload
+        - pane3:
+            - code radbooking.code-workspace
+            - clear
+            - git status
+  - secondary-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - clear
+        - pane2:
+            - clear
+

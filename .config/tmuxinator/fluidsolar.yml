@@ -1,0 +1,24 @@
+name: fluidsolar
+root: ~/Documents/fluidsolar
+
+windows:
+  - fluidsolar-dev-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - nvm use 18
+            - npm start
+        - pane2:
+            - clear
+        - pane3:
+            - code .
+            - clear
+            - git status
+  - secondary-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - clear
+        - pane2:
+            - clear
+
