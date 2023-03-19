@@ -18,6 +18,7 @@ windows:
             - flask run
         - pane3:
             - code .vscode/radreport.code-workspace
+            - open http://localhost:5050/
             - clear
             - git status
   - secondary-window:

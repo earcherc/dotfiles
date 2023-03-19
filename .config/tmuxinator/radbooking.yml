@@ -16,8 +16,10 @@ windows:
             - uvicorn main.main:app --reload
         - pane3:
             - code radbooking.code-workspace
+            - open http://localhost:3000/
             - clear
             - git status
+            
   - secondary-window:
       layout: even-horizontal
       panes:
