@@ -79,9 +79,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-
-
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -123,18 +120,6 @@ alias grm="git rebase master"
 alias config='/usr/bin/git --git-dir=/Users/ethancavill/.cfg/ --work-tree=/Users/ethancavill'
 
 # export KEYTIMEOUT=10
-
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
-bindkey -s '^o' 'lfcd\n'
 
 # Edit line in vim with ctrl-e:
 # autoload edit-command-line; zle -N edit-command-line
