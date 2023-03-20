@@ -137,8 +137,8 @@ lfcd () {
 bindkey -s '^o' 'lfcd\n'
 
 # Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+# autoload edit-command-line; zle -N edit-command-line
+# bindkey '^e' edit-command-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
