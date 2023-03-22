@@ -134,6 +134,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 eval "$(direnv hook zsh)"
+export EDITOR="code -w"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)

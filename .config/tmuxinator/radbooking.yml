@@ -8,7 +8,7 @@ windows:
         - pane1:
             - cd booking-frontend/
             - clear
-            - nvm use 18
+            - nvm use 16
             - npm run dev
         - pane2:
             - cd booking-backend/
