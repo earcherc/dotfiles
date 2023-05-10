@@ -50,12 +50,12 @@ alias ll="exa -l -g --icons"
 alias lt="exa --tree --icons -a -I '.git|__pycache__|.mypy_cache|.ipynb_checkpoints'"
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 
-export EDITOR="code -w"
-
 source $ZSH/oh-my-zsh.sh
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+export EDITOR="code-insiders -w"
 
 eval "$(starship init zsh)"
 
