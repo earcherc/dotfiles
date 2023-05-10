@@ -28,4 +28,3 @@ windows:
             - killall redis-server
             - redis-server
         - pane2:
-            - elasticsearch

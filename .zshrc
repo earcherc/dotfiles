@@ -1,8 +1,10 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 DISABLE_LS_COLORS="true"
-
 COMPLETION_WAITING_DOTS="true"
+
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # FZF settings
 export FZF_BASE="$HOME/.fzf"
@@ -10,7 +12,8 @@ export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!.git/"'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
-ZSH_THEME="robbyrussell"
+ZSH_THEM=E"robbyrussell"
+
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
 plugins=(
@@ -59,5 +62,3 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-
