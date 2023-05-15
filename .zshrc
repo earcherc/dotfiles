@@ -25,13 +25,13 @@ plugins=(
   fzf	
 )
 
-alias python=python3
+alias python="python3"
 alias gs="git status"
 
 alias g="git"
 alias ga="git add ."
 alias gc="git commit -m"
-alias gac='git add . && git commit -m'
+alias gac="git add . && git commit -m"
 alias gpush="git push"
 alias gpushf="git push -f"
 alias gcom="git checkout master"
@@ -42,7 +42,7 @@ alias gpulln="git pull"
 alias gamm="git commit --ammend -a"
 alias grm="git rebase master"
 
-alias config='/usr/bin/git --git-dir=/Users/ethancavill/.cfg/ --work-tree=/Users/ethancavill'
+alias config="/usr/bin/git --git-dir=/Users/ethancavill/.cfg/ --work-tree=/Users/ethancavill"
 
 alias lss="/bin/ls"
 alias ls="exa --icons"
@@ -55,7 +55,7 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-export EDITOR="code-insiders -w"
+export EDITOR="code -w"
 
 eval "$(starship init zsh)"
 
