@@ -19,11 +19,4 @@ windows:
             - code core.code-workspace
             - clear
             - git status
-  - secondary-window:
-      layout: even-horizontal
-      panes:
-        - pane1:
-            - clear
-        - pane2:
-            - clear
 

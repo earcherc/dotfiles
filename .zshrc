@@ -62,3 +62,8 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
