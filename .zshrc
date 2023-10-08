@@ -5,6 +5,7 @@ COMPLETION_WAITING_DOTS="true"
 
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/Users/ethancavill/anaconda3/bin:$PATH"
 
 # FZF settings
 export FZF_BASE="$HOME/.fzf"
@@ -26,6 +27,7 @@ plugins=(
 )
 
 alias python="python3"
+alias pip="pip3"
 alias gs="git status"
 
 alias g="git"
@@ -63,7 +65,5 @@ eval "$(direnv hook zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+
