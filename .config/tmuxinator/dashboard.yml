@@ -1,0 +1,21 @@
+name: dashboard
+root: ~/Documents/code/dashboard
+
+windows:
+  - dashboard-dev-window:
+      layout: even-horizontal
+      panes:
+        - pane1:
+            - cd frontend/
+            - clear
+            - nvm use 18
+            - npm run dev
+        - pane2:
+            - cd backend/
+            - clear
+        - pane3:
+            - code dashboard.code-workspace
+            - open http://localhost:3000/
+            - clear
+            - git status
+
