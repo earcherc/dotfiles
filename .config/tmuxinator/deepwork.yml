@@ -12,7 +12,7 @@ windows:
             - watch -n 10 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
 
         - pane3: # Code Editor
-            - code dashboard.code-workspace
+            - code deepwork.code-workspace
 
         - pane4: # Browser for Testing
             - sleep 5 # Wait for server to start
