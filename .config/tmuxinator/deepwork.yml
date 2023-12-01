@@ -1,0 +1,19 @@
+name: deepwork
+root: ~/Documents/code/deepwork
+
+windows:
+  - deepwork-dev:
+      layout: main-horizontal
+      panes:
+        - pane1: # Docker Services
+            - docker-compose up --build
+
+        - pane2: # Git and System Monitoring
+            - watch -n 10 'docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+
+        - pane3: # Code Editor
+            - code dashboard.code-workspace
+
+        - pane4: # Browser for Testing
+            - sleep 5 # Wait for server to start
+            - open http://localhost:3000/
