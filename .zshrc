@@ -12,6 +12,9 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 # Anaconda settings
 export PATH="/Users/ethancavill/anaconda3/bin:$PATH"
 
+# LaTeX (MacTeX) settings
+export PATH="/Library/TeX/texbin:$PATH"
+
 # FZF settings
 export FZF_BASE="$HOME/.fzf"
 export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!.git/"'
@@ -65,8 +68,8 @@ alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}
 source $ZSH/oh-my-zsh.sh
 
 # Zsh syntax highlighting and autosuggestions
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Set default editor
 export EDITOR="code -w"
@@ -78,10 +81,7 @@ eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 
 # Source FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
 # OpenSSL library path
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-
-# LaTeX (MacTeX) settings
-export PATH="/Library/TeX/texbin:$PATH"
