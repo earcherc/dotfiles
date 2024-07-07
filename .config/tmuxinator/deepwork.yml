@@ -13,7 +13,6 @@ windows:
 
         - pane3: # Code Editor
             - code deepwork.code-workspace
-
-        - pane4: # Browser for Testing
             - sleep 5 # Wait for server to start
             - open http://localhost:3000/
+            - clear
