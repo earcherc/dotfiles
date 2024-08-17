@@ -15,12 +15,6 @@ export PATH="/Users/ethancavill/anaconda3/bin:$PATH"
 # LaTeX (MacTeX) settings
 export PATH="/Library/TeX/texbin:$PATH"
 
-# FZF settings
-export FZF_BASE="$HOME/.fzf"
-export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore --files -g "!.git/"'
-export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-
 # Zsh theme
 ZSH_THEME="robbyrussell"
 
@@ -33,36 +27,29 @@ plugins=(
   zsh-z
   zsh-nvm
   docker
-  kubectl
-  fzf
 )
 
 # Aliases
-alias python="python3"
-alias pip="pip3"
-alias gs="git status"
-
-alias g="git"
-alias ga="git add ."
-alias gc="git commit -m"
-alias gac="git add . && git commit -m"
-alias gpush="git push"
-alias gpushf="git push -f"
-alias gcom="git checkout main"
-alias gco="git checkout"
-alias gf="git fetch"
-alias gpull="git pull --rebase"
-alias gpulln="git pull"
-alias gamm="git commit --amend -a"
-alias grm="git rebase main"
 
 alias config="/usr/bin/git --git-dir=/Users/ethancavill/.cfg/ --work-tree=/Users/ethancavill"
-
 alias lss="/bin/ls"
-alias ls="exa --icons"
-alias ll="exa -l -g --icons"
-alias lt="exa --tree --icons -a -I '.git|__pycache__|.mypy_cache|.ipynb_checkpoints'"
-alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+
+# Eza commands
+alias ld='eza -lD'
+alias lf='eza -lf --color=always | grep -v /'
+alias lh='eza -dl .* --group-directories-first'
+alias ll='eza -al --group-directories-first'
+alias ls='eza -alf --color=always --sort=size | grep -v /'
+alias lt='eza -al --sort=modified'
+
+# Exa command descs
+
+# ld — lists only directories (no files)
+# lf — lists only files (no directories)
+# lh — lists only hidden files (no directories)
+# ll — lists everything with directories first
+# ls — lists only files sorted by size
+# lt — lists everything sorted by time updated
 
 # Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
@@ -79,9 +66,6 @@ eval "$(starship init zsh)"
 
 # Initialize direnv
 eval "$(direnv hook zsh)"
-
-# Source FZF
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 
 # OpenSSL library path
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
