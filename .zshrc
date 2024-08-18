@@ -36,20 +36,21 @@ alias lss="/bin/ls"
 
 # Eza commands
 alias ld='eza -lD'
-alias lf='eza -lf --color=always | grep -v /'
-alias lh='eza -dl .* --group-directories-first'
-alias ll='eza -al --group-directories-first'
-alias ls='eza -alf --color=always --sort=size | grep -v /'
-alias lt='eza -al --sort=modified'
+alias lf='eza -lf'
+alias lh='eza -ld .*'
+alias ll='eza -la --group-directories-first'
+alias ls='eza -l --group-directories-first'
+alias lt='eza -la --sort=modified'
 
-# Exa command descs
+# Exa command descriptions:
+# ld — lists only directories
+# lf — lists only files
+# lh — lists only hidden files and directories
+# ll — lists everything (including hidden) with directories first
+# ls — lists non-hidden files and directories, with directories first
+# lt — lists everything sorted by modification time
 
-# ld — lists only directories (no files)
-# lf — lists only files (no directories)
-# lh — lists only hidden files (no directories)
-# ll — lists everything with directories first
-# ls — lists only files sorted by size
-# lt — lists everything sorted by time updated
+alias vim='nvim'
 
 # Source oh-my-zsh
 source $ZSH/oh-my-zsh.sh
