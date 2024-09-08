@@ -2,7 +2,6 @@ set guicursor=
 set scrolloff=8
 set number
 set relativenumber
-
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -13,10 +12,19 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+Plug 'dense-analysis/ale'
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 let mapleader = " "
-nnoremap <leader>pv :Vex<CR>
+nnoremap <leader>pv :Ex<CR>
 nnoremap <leader>pf :Files<CR>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-j> :cnext<CR>
@@ -53,3 +61,5 @@ endif
 if (has("termguicolors"))
     set termguicolors
 endif
+
+
